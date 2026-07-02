@@ -21,23 +21,61 @@
         <a href="donate.html">Donate</a>
         <a href="ngo.html">NGOs</a>
         <a href="volunteer.html">Volunteers</a>
+        <a href="ai.html">AI Checker</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
 
-<section>
+<section class="hero">
 
-    <h2>Connecting Surplus Food with Hungry People</h2>
+    <div class="hero-text">
 
-    <p>
-        AnnSetu helps restaurants, homes and event organizers
-        donate extra food to NGOs and volunteers so that
-        no food goes to waste.
-    </p>
+        <h2>Connecting Surplus Food with Hungry People</h2>
 
-    <button onclick="donateFood()">Donate Now</button>
+        <p>
+            AnnSetu connects restaurants, homes, hotels and event organizers
+            with NGOs and volunteers to ensure that surplus food reaches
+            people in need instead of going to waste.
+        </p>
+
+        <button class="btn" onclick="donateFood()">
+        Donate Now
+        </button>
+
+    </div>
+
+    <div class="hero-image-container">
+
+        <img src="food donation.png" alt="Food Donation" class="hero-image">
+
+    </div>
 
 </section>
+<section class="finder">
+
+    <h2>📍 Find Nearby NGO</h2>
+
+    <p>Select your city to find a nearby NGO.</p>
+
+    <select id="city">
+        <option value="">-- Select City --</option>
+        <option>Aurangabad</option>
+        <option>Patna</option>
+        <option>Ranchi</option>
+        <option>Kolkata</option>
+    </select>
+
+    <br><br>
+
+    <button class="btn" onclick="findNGO()">
+        Find NGO
+    </button>
+
+    <h3 id="ngoResult"></h3>
+
+</section>
+
+
 <section class="features">
 
     <div class="card">
