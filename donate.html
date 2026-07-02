@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate Food | AnnSetu</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,45 +12,84 @@
 
 <header>
     <h1>🍱 AnnSetu</h1>
-    <p>Donate Surplus Food</p>
 
     <nav>
         <a href="index.html">Home</a>
         <a href="donate.html">Donate</a>
         <a href="ngo.html">NGOs</a>
-        <a href="volunteer.html">Volunteers</a>
+        <a href="volunteer.html">Volunteer</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
 
-<section>
+<section class="donate-page">
 
-<h2>Donate Food</h2>
+    <div class="donate-left">
 
-<p>Fill out the form below to donate surplus food.</p>
+        
 
-<form>
+        <h2>Every Meal Can Change a Life ❤️</h2>
 
-<input type="text" placeholder="Your Name"><br><br>
+        <p>
+            Donate your surplus food and help us fight hunger.
+            Together we can reduce food waste and feed those in need.
+        </p>
 
-<input type="tel" placeholder="Phone Number"><br><br>
+    </div>
 
-<input type="text" placeholder="Food Type"><br><br>
+    <div class="donate-right">
 
-<input type="number" placeholder="Number of Meals"><br><br>
+        <h2>Food Donation Form</h2>
 
-<input type="text" placeholder="Location"><br><br>
+        <input type="text" placeholder="Donor Name">
 
-<button type="button" onclick="donateFood()">
-Submit Donation
-</button>
+        <input type="tel" placeholder="Phone Number">
 
-</form>
+        <select>
+            <option>Select Food Type</option>
+            <option>Rice</option>
+            <option>Dal</option>
+            <option>Roti</option>
+            <option>Vegetables</option>
+            <option>Mixed Meal</option>
+        </select>
+
+        <input type="number" placeholder="Serves (People)">
+
+        <input type="text" placeholder="Pickup Address">
+
+        <input type="time">
+
+        <textarea placeholder="Additional Notes"></textarea>
+
+        <button class="btn" onclick="submitDonation()">
+            🚀 Submit Donation
+        </button>
+
+        <div id="successMessage"></div>
+
+<div id="tracker" style="display:none;">
+
+    <h2>🚚 Donation Tracking</h2>
+    <div class="progress-container">
+    <div id="progressBar"></div>
+</div>
+
+    <div class="track-step">✅ Donation Request Received</div>
+
+    <div class="track-step">🏢 NGO Assigned</div>
+
+    <div class="track-step">🚚 Volunteer On The Way</div>
+
+    <div class="track-step">❤️ Food Delivered</div>
+
+</div>
+
+    </div>
 
 </section>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>

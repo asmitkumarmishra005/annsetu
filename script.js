@@ -57,3 +57,59 @@ function findNGO() {
     }
 
 }
+function submitDonation() {
+
+    document.getElementById("successMessage").innerHTML = `
+        <div class="success-box">
+            <h2>✅ Donation Submitted Successfully!</h2>
+            <p>Thank you for helping reduce food waste.</p>
+            <p>Searching for the nearest NGO...</p>
+        </div>
+    `;
+
+    // Show the tracker
+    document.getElementById("tracker").style.display = "block";
+
+    // Reset tracker steps
+    document.getElementById("step1").innerHTML = "⏳ Donation Request Received";
+    document.getElementById("step2").innerHTML = "⏳ NGO Assignment Pending";
+    document.getElementById("step3").innerHTML = "⏳ Volunteer Not Assigned";
+    document.getElementById("step4").innerHTML = "⏳ Waiting for Delivery";
+
+    // Animate the tracking
+    setTimeout(function () {
+        document.getElementById("step1").innerHTML = "✅ Donation Request Received";
+    }, 1000);
+
+    setTimeout(function () {
+        document.getElementById("step2").innerHTML = "🏢 NGO Assigned";
+    }, 2500);
+
+    setTimeout(function () {
+        document.getElementById("step3").innerHTML = "🚚 Volunteer On The Way";
+    }, 4500);
+
+    setTimeout(function () {
+        document.getElementById("step4").innerHTML = "❤️ Food Delivered Successfully";
+    }, 6500);
+
+}
+setTimeout(function () {
+    document.getElementById("step1").innerHTML = "✅ Donation Request Received";
+    document.getElementById("progressBar").style.width = "25%";
+}, 1000);
+
+setTimeout(function () {
+    document.getElementById("step2").innerHTML = "🏢 NGO Assigned";
+    document.getElementById("progressBar").style.width = "50%";
+}, 2500);
+
+setTimeout(function () {
+    document.getElementById("step3").innerHTML = "🚚 Volunteer On The Way";
+    document.getElementById("progressBar").style.width = "75%";
+}, 4500);
+
+setTimeout(function () {
+    document.getElementById("step4").innerHTML = "❤️ Food Delivered Successfully";
+    document.getElementById("progressBar").style.width = "100%";
+}, 6500);
