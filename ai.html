@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Food Freshness Checker | AnnSetu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🤖 AI Food Freshness Checker</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="donate.html">Donate</a>
+        <a href="ngo.html">NGOs</a>
+        <a href="volunteer.html">Volunteers</a>
+        <a href="contact.html">Contact</a>
+        <a href="ai.html">AI Checker</a>
+    </nav>
+</header>
+
+<section>
+
+<h2>Check Food Safety</h2>
+
+<p>Select the food type and enter how many hours ago it was cooked.</p>
+
+<select id="food">
+    <option>Rice</option>
+    <option>Dal</option>
+    <option>Vegetables</option>
+    <option>Roti</option>
+</select>
+
+<br><br>
+
+<input type="number" id="hours" placeholder="Hours since cooking">
+
+<br><br>
+
+<button onclick="checkFood()">
+Check Food
+</button>
+
+<h2 id="result"></h2>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
