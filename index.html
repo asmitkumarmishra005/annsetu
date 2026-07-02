@@ -21,7 +21,6 @@
         <a href="donate.html">Donate</a>
         <a href="ngo.html">NGOs</a>
         <a href="volunteer.html">Volunteers</a>
-        <a href="ai.html">AI Checker</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
@@ -51,6 +50,42 @@
     </div>
 
 </section>
+<section class="how-it-works">
+
+    <h2>How AnnSetu Works</h2>
+
+    <div class="features">
+
+        <div class="card">
+            <h2>🍱</h2>
+            <h3>Donate Food</h3>
+            <p>
+                Restaurants, homes and event organizers
+                donate surplus food through AnnSetu.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>🚚</h2>
+            <h3>Pickup</h3>
+            <p>
+                Nearby NGOs and volunteers receive the request
+                and collect the food.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>❤️</h2>
+            <h3>Feed People</h3>
+            <p>
+                Fresh food reaches people in need,
+                reducing food waste.
+            </p>
+        </div>
+
+    </div>
+
+</section>
 <section class="finder">
 
     <h2>📍 Find Nearby NGO</h2>
@@ -72,6 +107,46 @@
     </button>
 
     <h3 id="ngoResult"></h3>
+
+</section>
+<section class="ai-checker">
+
+    <h2> 🤖 AI-Powered Food Safety Assistant</h2>
+    <p>
+Get an instant recommendation based on food type, weather conditions,
+and time since cooking to help reduce food waste safely.
+</p>
+
+    <p>Select the food details below.</p>
+
+    <select id="foodType">
+        <option value="">Select Food</option>
+        <option value="Rice">Rice</option>
+        <option value="Roti">Roti</option>
+        <option value="Dal">Dal</option>
+        <option value="Vegetables">Vegetables</option>
+    </select>
+
+    <br><br>
+
+    <select id="weather">
+        <option value="">Select Weather</option>
+        <option value="Hot">Hot</option>
+        <option value="Normal">Normal</option>
+        <option value="Cold">Cold</option>
+    </select>
+
+    <br><br>
+
+    <input type="number" id="hours" placeholder="Hours Since Cooking">
+
+    <br><br>
+
+    <button class="btn" onclick="checkFood()">
+        Check Freshness
+    </button>
+
+    <h3 id="result"></h3>
 
 </section>
 

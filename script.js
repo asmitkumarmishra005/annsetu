@@ -4,28 +4,37 @@ function donateFood() {
 
 function checkFood() {
 
-    let hours = document.getElementById("hours").value;
+    let food = document.getElementById("foodType").value;
+    let weather = document.getElementById("weather").value;
+    let hours = parseInt(document.getElementById("hours").value);
+
     let result = document.getElementById("result");
 
-    if (hours === "") {
-        result.innerHTML = "Please enter the number of hours.";
-        result.style.color = "blue";
+    if(food=="" || weather=="" || isNaN(hours)){
+        result.innerHTML="⚠️ Please fill all details.";
+        result.style.color="orange";
         return;
     }
 
-    hours = Number(hours);
-
-    if (hours <= 4) {
-        result.innerHTML = "✅ Safe to Donate";
-        result.style.color = "green";
-    } else if (hours <= 8) {
-        result.innerHTML = "⚠️ Donate Immediately";
-        result.style.color = "orange";
-    } else {
-        result.innerHTML = "❌ Not Recommended";
-        result.style.color = "red";
+    if(hours <= 4){
+        result.innerHTML="✅ Fresh and Safe to Donate";
+        result.style.color="green";
     }
+    else if(weather=="Hot" && hours>4){
+        result.innerHTML="⚠️ Donate Immediately. Food may spoil soon.";
+        result.style.color="orange";
+    }
+    else if(hours<=8){
+        result.innerHTML="✅ Safe, but donate as soon as possible.";
+        result.style.color="green";
+    }
+    else{
+        result.innerHTML="❌ Food is not recommended for donation.";
+        result.style.color="red";
+    }
+
 }
+
 function findNGO() {
 
     let city = document.getElementById("city").value;
